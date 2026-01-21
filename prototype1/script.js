@@ -8,7 +8,7 @@ const canvas = document.querySelector('.webgl')
 
 //Scene
 const scene = new THREE.Scene()
-scene.background = new THREE.Color('grey')
+scene.background = new THREE.Color('blanchedalmond')
 
 //Camera
 const camera = new THREE.PerspectiveCamera(
