@@ -37,9 +37,16 @@ const testSphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 
 scene.add(testSphere)
 
+/********************
+** MESHES (square) **
+*********************/
+const squareGeometry = new THREE.BoxGeometry(1)
+const squareMaterial = new THREE.MeshNormalMaterial()
+const testSquare = new  THREE.Mesh(squareGeometry, squareMaterial)
 
+testSquare.position.x = 2
 
-
+scene.add(testSquare)
 
 /********************
 ** ANIMATION LOOP **
@@ -53,9 +60,10 @@ const animation = () =>
     const elapsedTime = clock.getElapsedTime()
    
     //Animate testSphere
-    testSphere.position.z = Math.sin(elapsedTime)
+    testSphere.position.y = Math.sin(elapsedTime*2) * 2
 
-
+    testSquare.position.x = Math.sin(elapsedTime / 2) * 3
+    testSquare.position.z = Math.cos(elapsedTime / 2) * 3
     //Renderer
     renderer.render(scene, camera)
 
