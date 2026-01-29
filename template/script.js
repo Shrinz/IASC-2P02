@@ -1,4 +1,16 @@
-import * as THREE from 'three';
+import * as THREE from "three";
+import * as dat from "lil-gui"
+import { OrbitControls } from "OrbitControls"
+
+/**********
+ ** STEUP **
+ ***********/
+// Sizes 
+const size = {
+    width: window.innerWidth, 
+    height: window.innerHeight,
+    aspectRatio: window.innerWidth / window.innerHeight
+}
 
 /***********
  ** SCENE **
@@ -13,7 +25,7 @@ scene.background = new THREE.Color('grey')
 //Camera
 const camera = new THREE.PerspectiveCamera(
     75,
-    window.innerWidth / window.innerHeight,
+    size.aspectRatio,
     0.1,
     100
 )
@@ -25,7 +37,11 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     antialias: true
 })
-renderer.setSize(window.innerWidth, window.innerHeight)
+renderer.setSize(size.width, size.height)
+
+// Controls
+const controls = new OrbitControls(camera, canvas) 
+controls.enableDamping = true
 
 /********************
 ** MESHES **
@@ -37,6 +53,11 @@ const testSphere = new THREE.Mesh(sphereGeometry, sphereMaterial)
 
 scene.add(testSphere)
 
+/********
+** UI **
+*********/
+// UI
+const ui = new dat.GUI()
 
 
 
@@ -51,7 +72,9 @@ const animation = () =>
     
     //Return elapasedTime
     const elapsedTime = clock.getElapsedTime()
-    console.log(elapsedTime)
+    
+    //Update OrbitControls
+    controls.update()
 
     //Renderer
     renderer.render(scene, camera)
