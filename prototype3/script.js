@@ -63,9 +63,11 @@ scene.add(cave);
 
 //Object
 
+//Smiley Face
 const smileGroup = new THREE.Group();
 scene.add(smileGroup)
 
+// Eyes
 const eyeGeometery = new THREE.SphereGeometry(0.5, 16, 16); 
 const eyeMaterial = new THREE.MeshStandardMaterial({
     color: 'red'
@@ -80,13 +82,7 @@ const rightEye = new THREE.Mesh(eyeGeometery, eyeMaterial);
 rightEye.position.set(6, 2, -1);
 rightEye.castShadow = true; 
 
-
-//const torusKnotGeometry = new THREE.TorusKnotGeometry(1, 0.2)
-//const torusKnotMaterial = new THREE.MeshNormalMaterial()
-//const torusKnot = new THREE.Mesh(torusKnotGeometry, torusKnotMaterial)
-//torusKnot.position.set(6, 1, 0)
-//torusKnot.castShadow = true
-//scene.add(torusKnot)
+// Mouth
 
 const smileGeometry = new THREE.TorusGeometry(1.5, 0.2, 100, 32, Math.PI)
 const smileMaterial = new THREE.MeshStandardMaterial({
@@ -99,6 +95,13 @@ smile.rotation.y = Math.PI * 0.5
 smile.rotation.x = Math.PI      
 smile.castShadow = true
 smileGroup.add(leftEye, rightEye, smile)
+
+//const torusKnotGeometry = new THREE.TorusKnotGeometry(1, 0.2)
+//const torusKnotMaterial = new THREE.MeshNormalMaterial()
+//const torusKnot = new THREE.Mesh(torusKnotGeometry, torusKnotMaterial)
+//torusKnot.position.set(6, 1, 0)
+//torusKnot.castShadow = true
+//scene.add(torusKnot)
 
 /********************
 ** Lights **
