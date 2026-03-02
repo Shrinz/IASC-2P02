@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 1</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--three.js importmap-->
+    <script type="importmap">
+  {
+    "imports": {
+      "three": "https://ga.jspm.io/npm:three@0.182.0/build/three.module.js",
+      "OrbitControls": "https://ga.jspm.io/npm:three@0.182.0/examples/jsm/controls/OrbitControls.js" ,
+      "lil-gui": "https://ga.jspm.io/npm:lil-gui@0.21.0/dist/lil-gui.esm.js"
+    }
+  }
+  </script>
+
+  <!-- three.js scene -->
+   <script src="script.js" type="module"> </script>
+
+</head>
+<body>
+  <div class="flexbox">
+    <!-- ESSAY -->
+    <div class="essay">
+      <h2>1. Flatness</h2>
+      <p><span class="clickable" id="part-one">In a silent, gloomy cave by the sea two hikers stand trembling.</span> 
+       The only light they have left is a faint orange glow emanating from a tiny break in the ceiling behind them because their flashlights have run out of batteries. 
+       A large menacing shadow appears on the flat wall before them. They refer to it as the "Frowny Demon." 
+       It resembles a big face to them, with two round, luminous eyes and an eerie smile that stretches across the stone. They firmly believe that this is an old spirit or ghost that is there to frighten everyone who ventures into the cave. 
+       The air feels heavy as they look at the wall, scared that the figure may move.
+      </p>
+
+      <p>Suddenly, a strong gust of wind blows through the cave, causing the <span class="clickable" id="first-change"> Guardians eery smile to slowly turn upside down into a meancing frown. </span>
+        One hiker trips and falls back in terror, believing the monster is "waking up" to punish them. The panic grows as the <span class="clickable" id="second-change">Guardian's glowing eyes begain to slide towards each other, mergning and swapping places.</span>
+        To those inside, this is more than just movement; it feels like a scary ritual. They think that if those spinning eyes ever stop and glance at them, they will be cursed forever. 
+        They're so terrified of these shadows that they don't see the shapes are far too perfect and smooth to be from an ancient tale.
+      </p>
+
+      <h2>2. Seeing Double</h2>
+      <p><span class="clickable" id="part-two">Outside the cave, the world is a messy construction site,</span>
+       which would completely detour the hikers' terrifying story. The "Guardian" isn't a ghost at all; it's simply some old safety equipment left behind by a work crew. Two red floating buoys and a curving yellow fragment of a shattered plastic barrel are 
+       suspended from a metal frame directly in front of the sunny opening in the cave roof. 
+       For the workers on the surface, this is simply a pile of trash absorbing the afternoon light.
+      </p>
+
+      <p>As the ocean breeze comes up, <span class="clickable" id="third-change"> the curved peice of metal representing the mouth   begins to move up and down </span> This little movement gives the shadow inside the cave the appearance of being alive and dancing.  
+       The "monster" is actually just plastic and glass that move due to gravity and wind. When the wind picks up, the <span class="clickable" id="fourth-change"> the angle of the light shifts causing the Guardians face to stretch and squeeze </span>
+       This makes the shadow eyes inside appear to be sliding left and right, examining the ground for hikers. The people outside just witness a windy day and some swinging equipment. They have no idea they are the "puppet masters" of a nightmare, 
+       unintentionally upsetting the people stuck in the Flat world of the cave floor below.  
+      
+      </p> 
+
+      <h2> Defining Flatness</h2>
+      <P>Nick Sousanis's concept of Flatness looks to me to be similar to being trapped in a mental plateau. It occurs when we consider one side of a story to be 100% accurate without digging deeper. It's similar to ignoring the fact that the real Earth contains mountains, oceans, and depth
+         when viewing a flat map of the planet. When we let our routines or anxieties to prevent us from seeing the wider picture, we become "flat". The hikers in this cave are the ideal illustration of flatness. Despite their intelligence, they have reduced the world to a single wall.
+         Because they perceive "monsters" and "curses" rather than just paying attention how light and objects interact, their point of view is flat. They are so focused on the horrific outcome on the wall that they fail to notice what is going on behind them. They have flattened their own logic by treating a two dimensional shadow as if it were a living thing. 
+         They are held hostage by a basic outline because they refuse to look around and observe the 3D reality that is generating the image.
+      </P>
+      <h2>Defining Seeing Double</h2>
+      <P>
+        Seeing double is the cure for flatness. It entails being able to consider two opposing concepts at the same time in order to determine the truth. It's like having two eyes; each sees a little different perspective, and when your brain combines them, you can finally see how far away things are and how much space they take up. 
+        In this narrative "Seeing Double" refers to discovering that the scary face on the wall and the plastic waste on the surface are the same thing, simply viewed from different perspectives. The sunlight serves as a bridge between these two worlds transporting the image from the bright outside into the dark cave. 
+        The hikers witness a "Guardian" moving with supernatural strength, but the workers outside only see the wind tossing a few objects around. To "See Double" means to recognize that the "curse" is really a projection and the "demon" is simply a shape. It's when you understand you're not being pursued by a ghost, but by your own limited perception of reality. 
+        When we combine these two perspectives, we have a far deeper understanding of life, seeing that reality is a combination of what we see, the light surrounding us, and our own will to seek the truth. 
+       </P>
+
+    </div>
+
+    <!-- SCENE -->
+    <div class="scene">
+      <canvas class="webgl"></canvas>
+    </div>
+  </div>
+</body>
