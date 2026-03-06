@@ -12,6 +12,23 @@ const size = {
     aspectRatio: window.innerWidth / window.innerHeight
 }
 
+//Resizing
+window.addEventListener('resize', () =>
+{
+    // Update sizes
+    size.width = window.innerWidth
+    size.height = window.innerHeight
+    size.aspectRatio = window.innerWidth / window.innerHeight
+
+    // Update camera
+    camera.aspect = size.aspectRatio
+    camera.updateProjectionMatrix()
+
+    // Update renderer
+    renderer.setSize(size.width, size.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
 /***********
  ** SCENE **
  ***********/
@@ -37,7 +54,8 @@ const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     antialias: true
 })
-renderer.setSize(size.width, size.height)
+renderer.setSize(size.width, size.height) 
+
 
 // Controls
 const controls = new OrbitControls(camera, canvas) 
